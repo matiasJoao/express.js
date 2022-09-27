@@ -6,6 +6,7 @@ const path = require('path');
 
 const app = express()
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extends: false}));
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
