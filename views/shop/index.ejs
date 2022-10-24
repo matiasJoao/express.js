@@ -1,15 +1,8 @@
-<%- include('layouts/head.ejs') %>  
+<%- include('../layouts/head') %>  
     <link rel="stylesheet" href="/css/shop.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul type="none">
-                <li><a class="active" href="/">Shop</a></li>
-                <li><a href="/admin/add">Add Product</a></li>
-            </ul>
-        </nav>
-    </header>
+  <%- include('../layouts/navigation.ejs')%>
     <main>
     <% if(title.length > 0) { %>
         <% for(let product of title){ %>
@@ -21,6 +14,7 @@
                     <img src="<%= product.link %>" alt="some image">
                 </div>
                 <div class="footer">
+                    <p>$<%= product.price %></p>
                     <p>
                         <%= product.description %>
                     </p>

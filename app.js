@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({extends: false}));
 app.use('/admin', adminRoutes.routes);
 app.use(shopRoutes);
 
+
+
 app.use(notFoundController.notFound);
 
 app.listen(3000);   

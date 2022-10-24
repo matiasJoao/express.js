@@ -1,0 +1,28 @@
+<%- include('../layouts/head') %>  
+    <link rel="stylesheet" href="/css/shop.css">
+</head>
+<body>
+  <%- include('../layouts/navigation.ejs')%>
+    <main>
+    <% if(title.length > 0) { %>
+        <% for(let product of title){ %>
+            <div class="card">
+                <div class="header">
+                    <p><%= product.title %></p>
+                </div>
+                <div class="main">
+                    <img src="<%= product.link %>" alt="some image">
+                </div>
+                <div class="footer">
+                    <p>
+                        <%= product.description %>
+                    </p>
+                </div>
+            </div>
+        <% } %>    
+    <% } else { %>
+        <p> No Products yet</p>
+    <% } %>    
+    </main>
+</body>
+</html>

@@ -17,10 +17,11 @@ const getProductFromFile = callback =>{
 }
 
 module.exports = class Product{
-    constructor(title, description, link){
+    constructor(title, description, link, price){
         this.title = title
         this.description = description
         this.link = link
+        this.price = price
     }
   
     save(){
