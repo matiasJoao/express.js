@@ -45,9 +45,9 @@ a.active{
     border: solid 0.5px black;
     box-shadow: 3px 3px rgba(88, 84, 84, 0.877) ;
     border-radius:  1rem;
-    margin: 10%;
     background-color: black;
-    margin: 3rem;
+    margin: 4rem;
+   
 }
 .header{
     border-bottom: black solid 1px;

@@ -1,7 +1,7 @@
 const adminData = require('../routes/admin');
+const Prodcut = require('../Models/product');
 
 
-const product = [];
 
 
 exports.getAddProduct = (req, res, next)=>{
@@ -9,11 +9,14 @@ exports.getAddProduct = (req, res, next)=>{
 }
 
 exports.postProduct = (req, res)=>{
-    product.push({title: req.body.title, description: req.body.description, link: req.body.link});
+   const product = new Prodcut(req.body.title, req.body.description, req.body.link)
+   product.save()
     res.redirect('/');
 }
 
 exports.getPostProducts = (req, res, next)=>{
-    console.log( "shop", adminData.product);
-    res.render('shop', {pageTitle: 'Shop', title: product,  path: '/'})
+    Prodcut.fetchAll(product =>{
+        res.render('shop', {pageTitle: 'Shop', title: product,  path: '/'})
+    });
+    
 }
