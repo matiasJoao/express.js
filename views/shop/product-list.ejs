@@ -21,9 +21,7 @@
                 </div>
                 <div>
                     <a href="/product/<%= product.id %>"> <button class="button">Details</button> </a> 
-                    <form action="/add-to-cart" method="POST">
-                        <button class="button">Add to Cart</button>
-                    </form>
+                    <%- include('../layouts/add-to-cart.ejs')%>
                 </div>
             </div>
         </div>  
