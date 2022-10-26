@@ -1,29 +1,67 @@
-body, html{
+*{
     margin: 0;
+    padding: 0;
 }
-header{
+
+.headerMain{
     position: fixed;
-    background-color: hwb(214 7% 16%);
     width: 100%;
-    height: 3.5rem;
-    margin: none;
-    margin-left: 0.1rem;
-    margin-right: 0.1rem;
-  
+    height: 4rem;
+    background-color: rgba(0, 0, 0, 0.904);
+    margin-top: 0;
 }
-ul{
+.ul{
     display: flex;
     margin: 0px 0px;
+
 }
-li{
-    margin: 0.5rem  ;
-    padding:8px ;
+.li{
+    padding: 1rem;
 }
-a{
+.a{
     text-decoration: none;
-    font-size: 20px;
-    color:#90EE90 ;
+    color: rgb(52, 192, 52);
+    font-size: 25px;
 }
-h1{
-    margin: 0
+.a:hover{
+    cursor: pointer;
+    color:rgb(115, 236, 115) ;
+    font-size: 30px;
+}
+.iten{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.conteudo{
+    margin-top: 7rem;
+}
+.title{
+    border-bottom: 1px solid rgb(115, 236, 115);
+    color: rgb(115, 236, 115);
+    font-size: 70px;
+}
+.img{
+    width: 30rem;
+    height: 15rem;
+}
+.description{
+    border-top: 1px solid rgb(115, 236, 115);
+    color: rgb(115, 236, 115);
+    font-size: 30px;
+    padding: 6rem;
+}
+
+.button{
+    border: 0.5px solid rgb(52, 192, 52);
+    padding: 0.7rem ;
+    border-radius: 10px;
+    background: none;
+    color: rgb(52, 192, 52);
+}
+
+.button:hover{
+    cursor: pointer;
+    color:rgb(115, 236, 115);
 }

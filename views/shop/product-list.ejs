@@ -6,14 +6,15 @@
     <main>
     <% if(title.length > 0) { %>
         <% for(let product of title){ %>
+        <div class="main">
             <div class="card">
-                <div class="header">
+                <div class="headerCard">
                     <p><%= product.title %></p>
                 </div>
-                <div class="main">
+                <div class="mainCard">
                     <img src="<%= product.link %>" alt="some image">
                 </div>
-                <div class="footer">
+                <div class="footerCard">
                     <p>
                         <%= product.description %>
                     </p>
@@ -25,6 +26,7 @@
                     </form>
                 </div>
             </div>
+        </div>  
         <% } %>    
     <% } else { %>
         <p> No Products yet</p>

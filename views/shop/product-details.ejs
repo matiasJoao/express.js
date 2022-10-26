@@ -1,13 +1,26 @@
-<%- include('../layouts/head') %>  
-<link rel="stylesheet" href="/css/details.css">
-</head>
-<body>
-<%- include('../layouts/navigation.ejs')%>
+<%- include('../layouts/head') %>
+    <link rel="stylesheet" href="/css/details.css">
+    </head>
 
-          <h1><%= data.title %></h1> 
-          <hr>
-          <img src=" <%= data.link %>">
-          <p><%= data.description %></p>
+    <body>
+        <%- include('../layouts/navigation.ejs')%>
+            <div class="iten">
+                <div class="conteudo">
+                    <h1 class="title">
+                        <%= data.title %>
+                    </h1>
+                    <hr>
+                    <div class="holdsImg">
+                        <img class="img" src=" <%= data.link %>">
+                    </div>
+                    <p class="description">
+                        <%= data.description %>
+                    </p>
+                    <form action="/add-to-cart" method="POST">
+                        <button class="button">Add to Cart</button>
+                    </form>  
+                </div>
+            </div>
+    </body>
 
-</body>
-</html>
+    </html>
