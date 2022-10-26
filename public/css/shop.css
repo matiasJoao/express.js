@@ -3,7 +3,7 @@ body{
     margin: 0;
    
 }
-header{
+.header{
     position: fixed;
     background-color: hwb(214 7% 16%);
     width: 100%;
@@ -13,20 +13,20 @@ header{
     margin-right: 0.1rem;
   
 }
-ul{
+.ul{
     display: flex;
     margin: 0px 0px;
 }
-li{
+.li{
     margin: 0.5rem  ;
     padding:8px ;
 }
-a{
+.a{
     text-decoration: none;
     font-size: 20px;
     color:#90EE90 ;
 }
-main{
+.main{
       display:flex;
       flex-direction: row; 
       flex-wrap: wrap;
@@ -46,7 +46,7 @@ a.active{
     width: 21rem;
     height: 19rem;
     border: solid 0.5px black;
-    box-shadow: 3px 3px rgba(88, 84, 84, 0.877) ;
+    box-shadow: 0.3px 1px rgba(88, 84, 84, 0.877) ;
     border-radius:  1rem;
     background-color: black;
     margin: 5rem 0rem 0rem 0.8rem;
@@ -63,4 +63,20 @@ a.active{
 .main img{
     width: 100%;
     height: 100%;
+}
+.button{
+    border: 0.5px solid black;
+    padding: 0.7rem ;
+    border-radius: 10px;
+    background: none;
+    background-color: hwb(214 7% 16%);
+    color: #90EE90;
+    box-shadow: 0.3px 1px rgba(88, 84, 84, 0.877)
+    
+
+}
+
+.button:hover{
+    cursor: pointer;
+    color: #0400ff;
 }

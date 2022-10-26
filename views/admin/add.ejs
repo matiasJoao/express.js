@@ -2,16 +2,16 @@
     <link rel="stylesheet" href="/css/add-product.css">
 </head>
 <body>
-   
     <%- include('../layouts/navigation.ejs')%>
-    <main>
-        <form action="/admin/add" method="POST">
-            <input type="text" name="title" placeholder="type the name ">
-            <input type="text" name="description" placeholder="some description">
-            <input type="text" name="link" placeholder="type the link image">
-            <input type="number"  step="0.01" name="price"  placeholder="type the price">
-
-            <button type="submit">Add Product</button>
+    <main class="main">
+        <form class="formADD" action="/admin/add" method="POST">
+            <div class="inputsDiv">
+                <input class="input" type="text" name="title" placeholder="type the name ">
+                <input class="input" type="text" name="description" placeholder="some description">
+                <input class="input" type="text" name="link" placeholder="type the link image">
+                <input class="input" type="number"  step="0.01" name="price"  placeholder="type the price">
+                <button class="button" type="submit">Add Product</button>
+            </div>    
         </form>
     </main>
 </body>

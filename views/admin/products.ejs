@@ -1,6 +1,36 @@
-<%- include('../layouts/head.ejs') %>  <%- include('../layouts/head') %>  
+<%- include('../layouts/head') %>  
+    <link rel="stylesheet" href="/css/shop.css">
 </head>
 <body>
-<%- include('../layouts/navigation.ejs')%>
+  <%- include('../layouts/navigation.ejs')%>
+    <main>
+    <% if(title.length > 0) { %>
+        <% for(let product of title){ %>
+            <div class="card">
+                <div class="header">
+                    <p><%= product.title %></p>
+                </div>
+                <div class="main">
+                    <img src="<%= product.link %>" alt="some image">
+                </div>
+                <div class="footer">
+                    <p>$<%= product.price %></p>
+                    <p>
+                        <%= product.description %>
+                    </p>
+                </div>
+                <div >
+                   <a href="/admin/edit-product"> <button class="button">Edit</button> </a> 
+                   <form action="/add-to-cart" method="POST">
+                    <button class="button">Delete</button>
+                   </form>
+                   
+                </div>
+            </div>
+        <% } %>    
+    <% } else { %>
+        <p> No Products yet</p>
+    <% } %>    
+    </main>
 </body>
 </html>

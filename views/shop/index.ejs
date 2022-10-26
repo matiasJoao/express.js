@@ -1,16 +1,17 @@
 <%- include('../layouts/head') %>  
-    <link rel="stylesheet" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
   <%- include('../layouts/navigation.ejs')%>
-    <main>
+    <main >
     <% if(title.length > 0) { %>
         <% for(let product of title){ %>
+          <div class="main">
             <div class="card">
-                <div class="header">
+                <div class="headerCard">
                     <p><%= product.title %></p>
                 </div>
-                <div class="main">
+                <div class="mainCard">
                     <img src="<%= product.link %>" alt="some image">
                 </div>
                 <div class="footer">
@@ -19,7 +20,11 @@
                         <%= product.description %>
                     </p>
                 </div>
+                <div >
+                    <button class="button">Add to cart</button>
+                </div>
             </div>
+        </div>    
         <% } %>    
     <% } else { %>
         <p> No Products yet</p>
