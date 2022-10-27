@@ -21,7 +21,10 @@
                 </div>
                 <div>
                     <a href="/product/<%= product.id %>"> <button class="button">Details</button> </a> 
-                    <%- include('../layouts/add-to-cart.ejs')%>
+                    <form action="/cart" method="POST">
+                        <button class="button">Add to Cart</button>
+                        <input type="hidden" name="productId" value="<%= product.id %>" >
+                    </form>
                 </div>
             </div>
         </div>  

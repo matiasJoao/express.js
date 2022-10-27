@@ -16,9 +16,10 @@
                     <p class="description">
                         <%= data.description %>
                     </p>
-                    <form action="/add-to-cart" method="POST">
+                    <form action="/cart" method="POST">
                         <button class="button">Add to Cart</button>
-                    </form>  
+                        <input type="hidden" name="productId" value="<%= data.id %>" >
+                    </form>
                 </div>
             </div>
     </body>

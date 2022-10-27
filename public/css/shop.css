@@ -1,82 +1,86 @@
-
-body{
+*{
     margin: 0;
-   
+    padding: 0;
 }
-.header{
+
+.headerMain{
     position: fixed;
-    background-color: hwb(214 7% 16%);
     width: 100%;
-    height: 3.5rem;
-    margin: none;
-    margin-left: 0.1rem;
-    margin-right: 0.1rem;
-  
+    height: 4rem;
+    background-color: rgba(0, 0, 0, 0.904);
+    margin-top: 0;
 }
 .ul{
     display: flex;
     margin: 0px 0px;
+
 }
 .li{
-    margin: 0.5rem  ;
-    padding:8px ;
+    padding: 1rem;
 }
 .a{
     text-decoration: none;
-    font-size: 20px;
-    color:#90EE90 ;
+    color: rgb(52, 192, 52);
+    font-size: 25px;
 }
+.a:hover{
+    cursor: pointer;
+    color:rgb(115, 236, 115) ;
+    font-size: 30px;
+}
+
 .main{
-      display:flex;
-      flex-direction: row; 
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #90EE90;
-      width: 100%;
-      height: 100%;
-}
-a:hover,
-a:active,
-a.active{
-    color: #0400ff ;
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #90EE90;
+    width: 100%;
+    height: 180%;
 }
 .card{
+    margin-top: 7rem;
     width: 21rem;
     height: 19rem;
-    border: solid 0.5px black;
-    box-shadow: 0.3px 1px rgba(88, 84, 84, 0.877) ;
-    border-radius:  1rem;
+    border: 1px solid rgb(52, 192, 52);
+    border-radius: 20px;
+    text-align: center;
+    color: rgb(52, 192, 52);
     background-color: black;
-    margin: 5rem 0rem 0rem 0.8rem;
-   
+    box-shadow: 2px 2px 2px 1px rgba(52, 192, 52, 0.377);
 }
-.header{
-    border-bottom: black solid 1px;
+.card:hover{
+    width: 23rem;
+    height: 20rem;
 }
-.main{
+
+.headerCard{
+    border-bottom: 1px solid rgb(52, 192, 52) ;
+    padding: 2%;
+}
+.mainCard{
     width: 100%;
     height: 60%;
-    border-bottom: black solid 1px;
+    border-bottom: 1px solid rgb(52, 192, 52)
 }
-.main img{
+.mainCard img {
     width: 100%;
     height: 100%;
 }
+.footer{
+    padding: 3px;
+}
+
 .button{
-    border: 0.5px solid black;
+    border: 0.5px solid rgb(52, 192, 52);
     padding: 0.7rem ;
     border-radius: 10px;
     background: none;
-    background-color: hwb(214 7% 16%);
-    color: #90EE90;
-    box-shadow: 0.3px 1px rgba(88, 84, 84, 0.877)
-    
-
+    color: rgb(52, 192, 52);
 }
 
 .button:hover{
     cursor: pointer;
-    color: #0400ff;
+    color:rgb(115, 236, 115);
 }

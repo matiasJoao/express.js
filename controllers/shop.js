@@ -1,5 +1,5 @@
 const Prodcut = require('../Models/product');
-
+const Cart = require('../Models/cart');
 exports.getIndex = (req, res, next) =>{
     Prodcut.fetchAll(product =>{
         res.render('shop/index', {pageTitle: 'Shop', title: product,  path: '/'})
@@ -8,6 +8,13 @@ exports.getIndex = (req, res, next) =>{
 
 exports.getCart = (req, res, next) => {
     res.render('shop/cart', {path: '/cart', pageTitle:'Cart'})
+}
+exports.postCart = (req, res, next) => {
+    const prodId = req.body.productId
+    Prodcut.findId(prodId, (product) => {
+      Cart.addProduct(prodId, product.price)
+    })
+    res.redirect('/cart')
 }
 exports.getCheckout = (req, res, next) => {
   res.render('shop/checkout', {pageTitle: 'Checkout', path: '/checkout'})
