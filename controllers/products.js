@@ -5,7 +5,7 @@ const Prodcut = require('../Models/product');
 
 
 exports.getAddProduct = (req, res, next)=>{
-    res.render('admin/add', {pageTitle:'Add Product', path: '/admin/add'})
+    res.render('admin/add', {pageTitle:'Add Product', path: '/admin/add', })
 }
 
 exports.postProduct = (req, res)=>{
